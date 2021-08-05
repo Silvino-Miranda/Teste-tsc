@@ -138,7 +138,7 @@
         "signature": "9c2e6f4055f5100bb5917e10c707516c9e263a4eab7ca630c48a16610761d804"
       },
       "./src/main.ts": {
-        "version": "a7bffb29be31e96ba572a77a916345aff169709fe620c3dd2fecbb51b775a870",
+        "version": "43dd39639d75d74f7f4bd57ee7373871f95019d8c0f2a252f3f3c399c9b315bf",
         "signature": "6e1d40a76d3730e3646a58e40e9afc0445864f393d6f96e26f41435844bcd868"
       },
       "./src/reportservice/operatorlog.service.ts": {
@@ -737,7 +737,7 @@
       "c:/users/silvino/appdata/roaming/npm/node_modules/typescript/lib/lib.es2018.full.d.ts",
       "./src/produtos/produtos-controlle.ts",
       "./src/clientes/clientes-controller.ts",
-      "./src/main.ts",
+      "./src/reportservice/operatorlog.service.ts",
       "./src/reportservice/operatorlogcall.service.ts",
       "./src/reportservice/operatorlogcallservice.ts",
       "./src/reportservice/operatorlogservice.ts",
@@ -792,7 +792,7 @@
       "./node_modules/@types/node/ts3.6/base.d.ts",
       "./node_modules/@types/node/ts3.6/assert.d.ts",
       "./node_modules/@types/node/ts3.6/index.d.ts",
-      "./src/reportservice/operatorlog.service.ts"
+      "./src/main.ts"
     ]
   },
   "version": "3.6.4"
