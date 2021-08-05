@@ -22,4 +22,5 @@ public/*/**
 coverage
 
 
-*.js
+**/*.js
+tsconfig.tsbuildinfo
