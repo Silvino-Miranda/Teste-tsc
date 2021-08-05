@@ -3,7 +3,7 @@
     "incremental": true,
     "types": ["node"],
     "target": "es2018",
-    "module": "ESNext",
+    "module": "CommonJS",
     "strict": true,
     "esModuleInterop": true
   },
