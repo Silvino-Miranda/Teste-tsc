@@ -6,7 +6,6 @@
   },
   "extends": ["airbnb-base", "plugin:jest/recommended"],
   "globals": {
-
     "Atomics": "readonly",
     "SharedArrayBuffer": "readonly",
     "use": true,
