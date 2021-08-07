@@ -23,4 +23,5 @@ coverage
 
 
 **/*.js
+**/*.map
 tsconfig.tsbuildinfo
