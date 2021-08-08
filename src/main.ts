@@ -10,3 +10,5 @@ export class Main {
 }
 
 const cMain = new Main();
+
+cMain;
