@@ -1,4 +1,4 @@
-import { ProdutosController } from '../produtos/produtos-controlle';
+import { ProdutosController } from '../produtos/produtos-controller';
 
 export class ClientesController {
   produtosController: ProdutosController;
