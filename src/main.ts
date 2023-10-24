@@ -1,4 +1,5 @@
 import { ClientesController } from './clientes/clientes-controller';
+import { getRequiredFields } from './core/decorator/required.decorator';
 import { Produto } from './produtos/produto.model';
 
 export class Main {
@@ -11,7 +12,12 @@ export class Main {
     // Exemplo de uso:
     let produto: Produto;
     try {
+      // Testando
       produto = new Produto(12, 'João', 100, 10);
+
+      const requiredFields = getRequiredFields(produto);
+      console.log(requiredFields); // Deve imprimir ['name', 'email']
+
     } catch (error: any) {
       console.error(error.message);
     } finally {
