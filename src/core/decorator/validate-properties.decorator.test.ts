@@ -1,6 +1,4 @@
 import 'reflect-metadata'; // Se estiver usando reflect-metadata
-
-// Importe o decorador ValidateProperties
 import { ValidateProperties } from './validate-properties.decorator';
 
 describe('ValidateProperties Decorator', () => {
@@ -15,26 +13,35 @@ describe('ValidateProperties Decorator', () => {
     }
   }
 
-  it('should throw an error if a string property is null', () => {
-    expect(() => new TestClass(null, 123)).toThrowError('O campo prop1 é inválido.');
+  // Mockar console.debug
+  jest.spyOn(console, 'debug').mockImplementation(() => {});
+
+  afterEach(() => {
+    jest.clearAllMocks();
   });
 
-  it('should throw an error if a number property is null', () => {
-    expect(() => new TestClass('test', null)).toThrowError('O campo prop2 é inválido.');
+  it('should log a debug message if a string property is null', () => {
+    new TestClass(null, 123);
+    expect(console.debug).toHaveBeenCalledWith('[TestClass] O campo prop1 é inválido.');
   });
 
-  it('should throw an error if a string property is undefined', () => {
-    expect(() => new TestClass(undefined, 123)).toThrowError('O campo prop1 é inválido.');
+  it('should log a debug message if a number property is null', () => {
+    new TestClass('test', null);
+    expect(console.debug).toHaveBeenCalledWith('[TestClass] O campo prop2 é inválido.');
   });
 
-  it('should throw an error if a string property is an empty string', () => {
-    expect(() => new TestClass('', 123)).toThrowError('O campo prop1 é inválido.');
+  it('should log a debug message if a string property is undefined', () => {
+    new TestClass(undefined, 123);
+    expect(console.debug).toHaveBeenCalledWith('[TestClass] O campo prop1 é inválido.');
   });
 
-  it('should not throw an error if all properties are valid', () => {
-    expect(() => new TestClass('test', 123)).not.toThrow();
+  it('should log a debug message if a string property is an empty string', () => {
+    new TestClass('', 123);
+    expect(console.debug).toHaveBeenCalledWith('[TestClass] O campo prop1 é inválido.');
+  });
+
+  it('should not log a debug message if all properties are valid', () => {
+    new TestClass('test', 123);
+    expect(console.debug).not.toHaveBeenCalled();
   });
 });
-
-
-
